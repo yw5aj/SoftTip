@@ -1,0 +1,13 @@
+# Archive
+archive
+OriginalFiles
+
+# Huge data files
+csvs
+
+# Plots
+plots
+
+# Binary files
+*.dll
+*.pyc
