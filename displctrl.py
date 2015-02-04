@@ -33,7 +33,7 @@ class Session:
     def get_force_offset(self):
         self.force_offset = 0.
         self.force_offset = np.mean([self.get_current_force() for i in
-                                    range(5)])
+                                     range(5)])
         return
 
     def initialize_motion(self):
@@ -48,7 +48,7 @@ class Session:
         frequency (Hz).
         """
         self.xps.GatheringConfigurationSet(self.socket_id, [
-            POSITIONER+'.CurrentPosition', 'GPIO2.ADC1'])
+            POSITIONER + '.CurrentPosition', 'GPIO2.ADC1'])
         # System servo cycle frequency is 10 kHz, manual p.137
         divisor = int(10e3 / freq)
         data_number = int(duration * freq)
